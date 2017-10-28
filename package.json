@@ -1,48 +1,29 @@
 {
-  "name": "docpad-plugin-yourpluginname",
+  "name": "docpad-plugin-imagedimensions",
   "version": "2.1.0",
-  "description": "DocPad plugin that adds the ability to render Something to Something Else",
-  "homepage": "https://github.com/docpad/docpad-plugin-yourpluginname",
+  "description": "Get image dimensions.",
+  "homepage": "",
   "license": "MIT",
   "keywords": [
     "docpad",
     "docpad-plugin",
-    "something",
-    "somethingelse"
+    "imagedimensions",
+    "image",
+    "image-size",
+    "dimensions"
   ],
+  "author": "Tobias Knobloch <mail@tobias-knobloch.de> (https://github.com/knoblochtobias)",
   "badges": {
     "list": [
       "travisci",
       "npmversion",
-      "npmdownloads",
-      "daviddm",
-      "daviddmdev",
-      "---",
-      "patreon",
-      "opencollective",
-      "gratipay",
-      "flattr",
-      "paypal",
-      "bitcoin",
-      "wishlist",
-      "---",
-      "slackin"
+      "npmdownloads"
     ],
-    "config": {
-      "patreonUsername": "bevry",
-      "opencollectiveUsername": "bevry",
-      "gratipayUsername": "bevry",
-      "flattrUsername": "balupton",
-      "paypalURL": "https://bevry.me/paypal",
-      "bitcoinURL": "https://bevry.me/bitcoin",
-      "wishlistURL": "https://bevry.me/wishlist",
-      "slackinURL": "https://slack.bevry.me"
-    }
+    "config": {}
   },
-  "author": "Copyright holders name <copyright holder's email> (copyright holder's website url)",
   "maintainers": [
-    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
-    "Your name <your email> (your github url)"
+    "Tobias Knobloch <mail@tobias-knobloch.de> (https://github.com/knoblochtobias)",
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
   ],
   "contributors": [
     "Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
@@ -51,11 +32,11 @@
     "vsopvsop (https://github.com/vsopvsop)"
   ],
   "bugs": {
-    "url": "https://github.com/docpad/docpad-plugin-yourpluginname/issues"
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/docpad/docpad-plugin-yourpluginname.git"
+    "url": "https://github.com/knoblochtobias/docpad-plugin-imagedimensions.git"
   },
   "engines": {
     "node": ">=0.10"
@@ -64,7 +45,7 @@
     {
       "description": "Source + CoffeeScript + Require",
       "directory": "source",
-      "entry": "yourpluginname.plugin.coffee",
+      "entry": "imagedimensions.plugin.coffee",
       "syntaxes": [
         "coffeescript",
         "require"
@@ -73,7 +54,7 @@
     {
       "description": "CoffeeScript Compiled + ES5 + Require",
       "directory": "es5",
-      "entry": "yourpluginname.plugin.js",
+      "entry": "imagedimensions.plugin.js",
       "syntaxes": [
         "javascript",
         "es5",
@@ -81,8 +62,11 @@
       ]
     }
   ],
-  "main": "es5/yourpluginname.plugin.js",
-  "dependencies": {},
+  "main": "es5/imagedimensions.plugin.js",
+  "dependencies": {
+    "docpad-plugin-eco": "~2.2.1",
+    "image-size": "^0.6.1"
+  },
   "devDependencies": {
     "coffee-script": "^1.12.4",
     "coffeelint": "^1.16.0",
@@ -111,6 +95,6 @@
     "our:release:check:dirty": "git diff --exit-code",
     "our:release:tag": "export MESSAGE=$(cat ./HISTORY.md | sed -n \"/## v$npm_package_version/,/##/p\" | sed 's/## //' | awk 'NR>1{print buf}{buf = $0}') && test \"$MESSAGE\" || (echo 'proper changelog entry not found' && exit -1) && git tag v$npm_package_version -am \"$MESSAGE\"",
     "our:release:push": "git push origin master && git push origin --tags",
-    "test": "node --harmony es5/yourpluginname.test.js --joe-reporter=console"
+    "test": "node --harmony es5/imagedimensions.test.js --joe-reporter=console"
   }
 }

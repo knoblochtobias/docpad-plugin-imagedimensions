@@ -1,5 +1,8 @@
 {
-  "name": "docpad-plugin-yourpluginname-testsite",
+  "name": "docpad-plugin-imagedimensions-testsite",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "docpad-plugin-eco": "2"
+  }
 }

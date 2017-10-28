@@ -1,0 +1,5 @@
+<% dimensions = @getImageDimensions('testimage.png') %>
+Size of test image is:
+Width: <%= dimensions.width %>
+Height: <%= dimensions.height %>
+Type: <%= dimensions.type %>
