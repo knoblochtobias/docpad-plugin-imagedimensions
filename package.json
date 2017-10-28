@@ -2,7 +2,7 @@
   "name": "docpad-plugin-imagedimensions",
   "version": "2.1.0",
   "description": "Get image dimensions.",
-  "homepage": "",
+  "homepage": "https://github.com/knoblochtobias/docpad-plugin-imagedimensions#readme",
   "license": "MIT",
   "keywords": [
     "docpad",
@@ -31,12 +31,9 @@
     "Michael Duane Mooring <Mike@mdm.cc> (http://mdm.cc)",
     "vsopvsop (https://github.com/vsopvsop)"
   ],
-  "bugs": {
-    "url": ""
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knoblochtobias/docpad-plugin-imagedimensions.git"
+    "url": "git+https://github.com/knoblochtobias/docpad-plugin-imagedimensions.git"
   },
   "engines": {
     "node": ">=0.10"
@@ -96,5 +93,11 @@
     "our:release:tag": "export MESSAGE=$(cat ./HISTORY.md | sed -n \"/## v$npm_package_version/,/##/p\" | sed 's/## //' | awk 'NR>1{print buf}{buf = $0}') && test \"$MESSAGE\" || (echo 'proper changelog entry not found' && exit -1) && git tag v$npm_package_version -am \"$MESSAGE\"",
     "our:release:push": "git push origin master && git push origin --tags",
     "test": "node --harmony es5/imagedimensions.test.js --joe-reporter=console"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/knoblochtobias/docpad-plugin-imagedimensions/issues"
   }
 }
